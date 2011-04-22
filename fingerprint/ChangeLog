@@ -1,0 +1,102 @@
+2008-01-14  Cyrille Bagard <nocbos@gmail.com>
+
+	* aes2501.c:
+	Apply a patch made by Herton Ronaldo Krzesinski: if the device is not
+	present, the _dev structure isn't initialized and the system gets an
+	oops on exit.
+
+2007-11-05  Cyrille Bagard <nocbos@gmail.com>
+
+	* aes2501.c:
+	Apply Vasily Khoruzhick's new patch: rewrite image processing functions.
+	Thus, there should be no more significant common points with aes2501-wy.
+
+2007-11-05  Cyrille Bagard <nocbos@gmail.com>
+
+	* aes2501.c:
+	In order to respect the license of aes2501-wy, on which this driver is
+	based, begin to rewrite some functions. Thus, better handle histograms.
+	One more strip is often processed, but that is more logical like this.
+
+	* aes2501_regs.h:
+	Enumerate all used registers for convenience.
+
+2007-11-03  Cyrille Bagard <nocbos@gmail.com>
+
+	* aes2501.c:
+	Clean the code. Take care of signals when processes are awaking.
+	Apply Vasily Khoruzhick's new patch: autodetect picture reversing needs
+	and fix kernel oops in case of module removal.
+
+	* Makefile:
+	Remove hidden files and clean the rules. KERNELDIR has to be overrided
+	from the sheel if needed now.
+
+2007-10-29  Cyrille Bagard <nocbos@gmail.com>
+
+	* aes2501.c:
+	Apply Vasily Khoruzhick's patch and thus increase the resulting pictures
+	quality. Many thanks to him !
+
+	* Makefile:
+	Add two new rules: usertest and clean.
+
+	* usertest.c:
+	Initial commit.
+
+2007-08-27  Cyrille Bagard <nocbos@gmail.com>
+
+	* aes2501.c:
+	Make INIT_WORK macro working with 2.6.20+ kernels. Many thanks to
+	Miguel Gea Milvaques <xerakko> for the patch !
+
+2007-06-13  Cyrille Bagard <nocbos@gmail.com>
+
+	* aes2501.c:
+	* aes2501_regs.h:
+	Complete translation of all binary communications using well documented
+	registers and values (as often as possible).
+
+2007-06-13  Cyrille Bagard <nocbos@gmail.com>
+
+	* aes2501.c:
+	Increase communication speed by buffering bulk out. Output data
+	need to be flushed at the end now.
+
+2007-06-13  Cyrille Bagard <nocbos@gmail.com>
+
+	* aes2501.c:
+	* aes2501_regs.h:
+	Translate binary data used in finger detection. Some register values
+	still need to be understood. Note: some hex values are reserved bits
+	in registers.
+
+2007-06-12  Cyrille Bagard <nocbos@gmail.com>
+
+	* aes2501.c:
+	Begin the binary translation: the "standby" function now uses understood
+	instructions and prints debug status information if needed. CTRL2 register
+	value needs to be checked.
+
+	* aes2501_regs.h:
+	Define the interesting hex values for the following registers:
+	CTRL2, STAT, TREGC and TREGD.
+
+2007-06-12  Cyrille Bagard <nocbos@gmail.com>
+
+	* aes2501.c:
+	Clean the driver a little bit by removing old piece of code to handle
+	a character device in the old way.
+
+2007-06-12  Cyrille Bagard <nocbos@gmail.com>
+
+	* aes2501.c:
+	Use an own work queue. Scanning now starts with the AES2501_IOC_TEST
+	ioctl command. Reading the /dev entry blocks until data is available.
+
+2007-06-12  Cyrille Bagard <nocbos@gmail.com>
+
+	* aes2501.c:
+	* aes2501.h:
+	* Makefile:
+	Initial [crappy] commit.

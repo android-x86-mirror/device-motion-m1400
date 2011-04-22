@@ -1,0 +1,9 @@
+Device tree for the Motion M1400
+
+Target: Android 2.2 (2.3 next)
+
+Status:
+- Basic device config done
+- Added fingerprint reader driver (needs an app though to work)
+- M1400 keylayout (may not be proper, I'm unable to get some key scancodes)
+- M1400 settings
