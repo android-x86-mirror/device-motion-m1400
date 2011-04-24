@@ -2,7 +2,7 @@ PRODUCT_PACKAGES := $(THIRD_PARTY_APPS)
 
 $(call inherit-product,$(SRC_TARGET_DIR)/product/generic_x86.mk)
 
-PRODUCT_NAME := m1400
+PRODUCT_NAME := motion_m1400
 PRODUCT_DEVICE := m1400
 PRODUCT_MANUFACTURER := Motion
 #PRODUCT_PACKAGE_OVERLAYS := device/viewsonic/viewpad10/overlays
