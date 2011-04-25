@@ -26,4 +26,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/M1400.mk
+    $(LOCAL_DIR)/m1400.mk
