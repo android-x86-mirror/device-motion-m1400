@@ -1,1 +1,6 @@
+on boot
+    chown system system /sys/class/backlight/acpi_video0/brightness
+    setkeycodes e074 218
+    setkeycodes e079 219
+
 service wacom-input /system/xbin/wacom-input

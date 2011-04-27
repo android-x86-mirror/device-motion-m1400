@@ -7,3 +7,16 @@ Status:
 - Added fingerprint reader driver (needs an app though to work)
 - M1400 keylayout (may not be proper, I'm unable to get some key scancodes)
 - M1400 settings
+
+PROBLEMS:
+- Audio (needs proper ALSA config)
+- Bluetooth (unknown BT stuff)
+- Fingerprint reader
+- Graphic acceleration
+
+Works:
+- WiFi
+- Wacom touch
+- USB
+- Audio through the jacks
+- Buttons (partially)
