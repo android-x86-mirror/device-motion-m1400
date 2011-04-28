@@ -10,8 +10,7 @@ Status:
 
 PROBLEMS:
 - Audio (needs proper ALSA config)
-- Bluetooth (unknown BT stuff)
-- Fingerprint reader
+
 - Graphic acceleration
 
 Works:
@@ -20,3 +19,7 @@ Works:
 - USB
 - Audio through the jacks
 - Buttons (partially)
+
+Won't fix:
+- Fingerprint reader
+- Bluetooth (unknown BT stuff)

@@ -4,3 +4,5 @@ on boot
     setkeycodes e079 219
 
 service wacom-input /system/xbin/wacom-input
+
+service initm1400 /system/bin/sh /system/etc/init.m1400.sh

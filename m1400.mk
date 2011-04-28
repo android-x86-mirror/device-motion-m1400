@@ -12,7 +12,7 @@ TARGET_STRIP := 1
 USE_SQUASHFS := 0
 
 #PRODUCT_COPY_FILES += \
-#	$(LOCAL_PATH)/init.x41t.sh:system/etc/init.x41t.sh
+	$(LOCAL_PATH)/init.m1400.sh:system/etc/init.m1400.sh
 #	$(LOCAL_PATH)/asound.conf:system/etc/asound.conf
 
 PRODUCT_COPY_FILES += \
@@ -20,12 +20,16 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/excluded-input-devices.xml:system/etc/excluded-input-devices.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
-	dalvik.vm.heapsize=32m \
-	ro.sf.lcd_density=240 \
+	dalvik.vm.heapsize=48m \
+	ro.sf.lcd_density=160 \
 	wifi.interface=eth1 \
-	wifi.supplicant_scan_interval=120
+	wifi.supplicant_scan_interval=120 \
+	ro.sf.install_non_market_apps=1
 
-PRODUCT_PACKAGES_EXCLUDE := 
+PRODUCT_PACKAGES_EXCLUDE += \
+	LIME \
+	PinyinIME \
+	Snake
 	
 
 #include $(call all-subdir-makefiles)
