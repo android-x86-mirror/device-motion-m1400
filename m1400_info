@@ -4,7 +4,7 @@ set -x
 detect_hardware()
 {
 
-	FB0DEV=i855
+	FB0DEV=i915
 	WIFDEV=ipw2200
 }
 

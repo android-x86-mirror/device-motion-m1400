@@ -6,10 +6,10 @@ PRODUCT_MANUFACTURER := motion
 PRODUCT_MODEL := Motion M1400
 PRODUCT_BRAND := Motion
 PRODUCT_PACKAGE_OVERLAYS := device/motion/m1400/overlays
-LOCAL_KEYMAPS_DIR := $(LOCAL_PATH)/keylayout
 
-TARGET_STRIP := 1 
-USE_SQUASHFS := 0
+# Flags needed for the new installer system I'm working on
+# TARGET_STRIP := 1 
+# USE_SQUASHFS := 0
 
 #PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/init.m1400.sh:system/etc/init.m1400.sh
@@ -25,11 +25,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	wifi.interface=eth1 \
 	wifi.supplicant_scan_interval=120 \
 	ro.sf.install_non_market_apps=1
-
-PRODUCT_PACKAGES_EXCLUDE += \
-	LIME \
-	PinyinIME \
-	Snake
-	
 
 #include $(call all-subdir-makefiles)

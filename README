@@ -10,8 +10,8 @@ Status:
 
 PROBLEMS:
 - Audio (needs proper ALSA config)
-
 - Graphic acceleration
+- ALS (could not find any info about it)
 
 Works:
 - WiFi
@@ -21,5 +21,5 @@ Works:
 - Buttons (partially)
 
 Won't fix:
-- Fingerprint reader
+- Fingerprint reader (needs an Android-side app to work)
 - Bluetooth (unknown BT stuff)
